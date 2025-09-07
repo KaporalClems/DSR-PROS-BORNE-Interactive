@@ -22,6 +22,20 @@
             overflow: hidden;
         }
 
+        /* Style pour la vidéo en arrière-plan */
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            background-size: cover;
+            object-fit: cover;
+        }
+
         /* Conteneur principal de la page */
         .kiosk-container {
             display: flex;
@@ -33,13 +47,6 @@
             text-align: center;
         }
 
-        /* Image de fond pour le corps de la page */
-        body {
-            background-image: url('https://raw.githubusercontent.com/KaporalClems/borne-vital-sport/refs/heads/main/photo-event-2025.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
         
         /* En-tête avec les titres et la nouvelle section date/heure */
         .kiosk-header {
@@ -332,6 +339,11 @@
     </style>
 </head>
 <body>
+    <!-- Vidéo de fond en boucle -->
+    <video autoplay muted loop playsinline id="background-video">
+        <source src="fotor-ai-202509081220.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la balise vidéo.
+    </video>
 
     <div class="kiosk-container">
 
@@ -347,13 +359,10 @@
                     <div class="time"></div>
                     <div class="date"></div>
                 </div>
-                <!-- Logo Decathlon en dessous de la date/heure -->
-                <img src="https://raw.githubusercontent.com/KaporalClems/borne-vital-sport/refs/heads/main/logo_vital_sport_-removebg-preview.png" alt="Logo Decathlon" class="logo-decathlon">
             </div>
 
             <h1 class="main-title">Destination Sud Pros 2025</h1>
             <h2 class="subtitle">SAINT PIERRE</h2>   
-            <p class="subtitle">Découvrez, jouez et explorez le sport autrement !</p>
         </header>
 
         <!-- ===== GRILLE D'APPLICATIONS ===== -->
@@ -389,7 +398,7 @@
         <div class="modal-content">
             <button class="modal-close-btn">&times;</button>
             <video id="intro-video" muted autoplay playsinline>
-                <source src="vital sport 2025.mp4" type="video/mp4">
+                <source src="RDV Vacances 02 aout 2025.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas la balise vidéo.
             </video>
         </div>
