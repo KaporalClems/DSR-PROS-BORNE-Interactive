@@ -84,15 +84,12 @@
         @keyframes pulse-vital {
             0% {
                 transform: scale(1);
-                text-shadow: 0 0 5px rgba(255,255,255,0.7);
             }
             50% {
                 transform: scale(1.03);
-                text-shadow: 0 0 10px rgba(255,255,255,0.9);
             }
             100% {
                 transform: scale(1);
-                text-shadow: 0 0 5px rgba(255,255,255,0.7);
             }
         }
 
@@ -115,6 +112,13 @@
         #datetime-container {
             font-family: 'Inter', sans-serif;
             text-align: right;
+        }
+
+        /* CHANGEMENT DE COULEUR DES TEXTES POUR LA LISIBILITÉ */
+        .kiosk-header .main-title,
+        .kiosk-header .subtitle,
+        #datetime-container {
+            color: black;
         }
 
         #datetime-container .time {
@@ -490,3 +494,4 @@
 
 </body>
 </html>
+
